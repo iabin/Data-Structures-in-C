@@ -21,9 +21,9 @@ typedef struct Stack{
 } Stack;
 
 Stack* newStack();
-int destroyStack(Stack* stack);
+int destroy(Stack* stack);
 int isEmpty(Stack* stack);
-int push(Stack* stack,ElemetType element);
+int push(Stack* stack,ElementType element);
 ElementType pop(Stack* stack);
 ElementType top(Stack* stack);
 
