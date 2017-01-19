@@ -2,7 +2,7 @@
 #include <stdio.h>
 /* Basic Queue Implemetation
 @author Alejandro Iabin Arteaga Hernandez
-Data structures: Queue
+Data structures: STACK
 */
 #ifndef __Queue_h
 #define __Queue_h
@@ -17,13 +17,14 @@ typedef struct Node{
 
 typedef struct Queue{
   Node* top;
+  Node* bot;
   int size;
 } Queue;
 
 Queue* newQueue();
-int destroyQueue(Queue* queue);
+int destroy(Queue* queue);
 int isEmpty(Queue* queue);
-int push(Queue* queue,ElemetType element);
+int push(Queue* queue,ElementType element);
 ElementType pop(Queue* queue);
 ElementType top(Queue* queue);
 
