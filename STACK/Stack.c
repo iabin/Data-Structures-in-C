@@ -23,6 +23,11 @@ Stack* newStack(){
 }
 
 int destroy(Stack* stack){
+   while(stack->top!=NULL){
+    Node* node = stack->top;
+    stack->top = stack->top->prev;
+    destroyNode(node);
+  }
   free(stack);
 }
 

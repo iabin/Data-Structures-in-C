@@ -25,9 +25,11 @@ typedef struct List{
   int size;
 } List;
 
-/* NODE METHODS ONLY FOR INTERNAL WORKING*/
+/* NODE METHODS ONLY FOR INTERNAL WORKING
 Node* newNode(ElementType* element);
 int destroyNode(Node* nodo);
+the methods are private
+/*
 
 /*List methods,you can use all*/
 List* newList();

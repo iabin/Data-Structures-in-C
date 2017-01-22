@@ -15,8 +15,18 @@ Node* newNode(ElementType* element){
 
 /* list destructor*/
 int destroy(List* list){
+  if(list->size==0){ 
   free(list);
-    return 0;
+  return 0;
+  }
+  Node* node = list->head;
+  while(list->head!=NULL){
+    Node* node = list->head;
+    free(node);
+    list->head = list->head->next;
+  }
+  free(list);
+  return 0;
 }
 
 /*Node destructor*/
